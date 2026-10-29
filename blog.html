@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ｜ドローンの勉強ノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#8fd3f4;
+  --sky-deep:#3aa7da;
+  --sky-pale:#eaf7fd;
+  --orange:#ff8a1f;
+  --orange-deep:#e06a00;
+  --ink:#1d3a4a;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  color:var(--ink);
+  background:var(--sky-pale);
+  line-height:1.8;
+}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:10;
+  background:var(--white);
+  border-bottom:4px solid var(--orange);
+}
+.nav{
+  max-width:1000px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.logo{font-weight:900;font-size:1.2rem;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{
+  display:inline-block;width:14px;height:14px;border-radius:50%;
+  background:var(--orange);box-shadow:0 0 0 4px var(--sky);
+}
+nav ul{list-style:none;display:flex;gap:6px;flex-wrap:wrap}
+nav a{
+  display:block;padding:6px 16px;border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:.95rem;
+}
+nav a:hover{background:var(--sky-pale)}
+nav a[aria-current="page"]{background:var(--orange);color:var(--white)}
+
+/* page title */
+.page-title{
+  background:linear-gradient(180deg,var(--sky-deep) 0%,var(--sky) 100%);
+  padding:40px 20px 36px;text-align:center;
+  border-bottom:12px solid var(--orange);
+}
+.page-title h1{
+  font-size:clamp(1.8rem,5vw,2.6rem);font-weight:900;
+  color:var(--white);text-shadow:0 3px 0 var(--orange-deep);
+}
+.page-title p{color:var(--white);font-weight:500;margin-top:6px}
+
+/* timeline */
+main{max-width:600px;margin:0 auto;padding:36px 20px 0}
+.timeline{
+  background:var(--white);
+  border:2px solid var(--sky);
+  border-radius:20px;
+  overflow:hidden;
+}
+.post{
+  padding:20px 24px;
+  border-bottom:1px solid var(--sky-pale);
+  border-left:8px solid var(--sky-deep);
+}
+.post:nth-child(even){border-left-color:var(--orange)}
+.post:last-child{border-bottom:0}
+.post time{
+  display:block;margin-bottom:4px;
+  font-size:.85rem;font-weight:700;color:var(--orange-deep);
+}
+.post p{font-size:1rem;overflow-wrap:anywhere}
+
+footer{
+  margin-top:72px;padding:28px 20px;text-align:center;
+  background:var(--ink);color:var(--white);font-size:.9rem;
+}
+footer a{color:var(--sky);margin:0 8px}
+
+@media (max-width:560px){
+  .nav{justify-content:center}
+  .post{padding:16px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><span></span>ドローンの勉強ノート</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-title">
+  <h1>ブログ</h1>
+  <p>ドローンの勉強の進み具合を、日付ごとに書いています。</p>
+</div>
+
+<main>
+  <div class="timeline">
+    <!-- 新しい投稿は、ここ（いちばん上）に article をコピーして追加してください -->
+    <article class="post">
+      <time datetime="2026-10-28">2026.10.28</time>
+      <p>ここに、その日に勉強したことを書きます。たとえば、ドローンの部品の名前や、飛行ルールで新しく知ったことなど。</p>
+    </article>
+
+    <article class="post">
+      <time datetime="2026-10-27">2026.10.27</time>
+      <p>ここに前の日の記録が入ります。短い一言でも大丈夫です。</p>
+    </article>
+
+    <article class="post">
+      <time datetime="2026-10-26">2026.10.26</time>
+      <p>ここにさらに前の日の記録が入ります。</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <nav aria-label="フッターメニュー">
+    <a href="index.html">ホーム</a>
+    <a href="blog.html">ブログ</a>
+    <a href="gallery.html">ギャラリー</a>
+    <a href="about.html">このサイトについて</a>
+  </nav>
+  <p style="margin-top:10px">&copy; 2026 ドローンの勉強ノート</p>
+</footer>
+
+</body>
+</html>
